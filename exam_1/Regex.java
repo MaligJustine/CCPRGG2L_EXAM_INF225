@@ -31,7 +31,7 @@ public class Regex {
         String password = scan.nextLine();
 
         // Provide the pattern
-        pattern = Pattern.compile("");
+        pattern = Pattern.compile("(?=.*\\w)(?=.*\\d+$)(?!.*[mrlsMRLS]).{7,}");
 
         match = pattern.matcher(password);
 
@@ -75,7 +75,7 @@ public class Regex {
         String email = scan.nextLine();
 
         // Provide regex pattern
-        pattern = Pattern.compile("");
+        pattern = Pattern.compile("^(?=.*38)[\\w\\.]{10,}@gmail\\.com");
 
         match = pattern.matcher(email);
 
@@ -126,7 +126,7 @@ public class Regex {
         String url = scan.nextLine();
 
         // Provide regex pattern
-        pattern = Pattern.compile("(?i)\\b(?:(?:https?|ftp)://)(?:\\S+(?::\\S*)?@)?(?:(?!(?:10|127)(?:\\.\\d{1,3}){3})(?!(?:169\\.254|192\\.168)(?:\\.\\d{1,3}){2})(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*(?:\\.(?:[a-z\\u00a1-\\uffff]{2,}))\\.?)(?::\\d{2,5})?(?:[/?#]\\S*)?\\b");
+        pattern = Pattern.compile("(https?:\\/\\/)?(www\\.)?(?=.*justine(-|.?))(?=.*aron(-|.?))(?=.*malig(-|.?)).+\\.com?");
 
         match = pattern.matcher(url);
 
@@ -154,7 +154,7 @@ public class Regex {
 
         // Provide regex pattern
         pattern = Pattern
-                .compile("");
+                .compile("\\w+(.pptx|.xlsx|.docx|.txt)");
         match = pattern.matcher(myfiles);
 
         boolean found = false;
